@@ -1,0 +1,69 @@
+/* regole generali */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul{
+  list-style-type: none;
+}
+
+
+main{
+  /* regole di debug */
+  background-color: pink;
+  /* fine debug */
+  height: calc(100vh - 100px);
+  display: flex;
+}
+
+/* regole di debug */
+nav,
+main > section {
+  border: 1px solid black;
+}
+/* fine debug */
+
+/* regole della navigazione */
+nav{
+  flex-basis: 200px;
+}
+
+/* corpo della pagina */
+main > section{
+  flex-grow: 1;
+}
+
+section .bottom{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+section .box{
+  /* regole di debug */
+  min-height: 150px;
+  width: 120px;
+  background-color: red;
+  /* fine debug */
+}
+
+section .top{
+  text-align: center;
+}
+
+section .top li{
+  display: inline-block;
+}
+
+footer{
+  /* regole di debug */
+  background-color: lightblue;
+  height: 100px;
+  /* fine debug */
+  position: fixed;
+  z-index: 100;
+  bottom: 0;
+  width: 100%;
+}
