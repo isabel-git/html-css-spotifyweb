@@ -3,6 +3,12 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  color: white;
+}
+
+a{
+  text-decoration: none;
+  color: white;
 }
 
 ul{
@@ -13,7 +19,7 @@ ul{
   display: flex;
 }
 
-
+/* regole corpo della pagina */
 main{
   /* regole di debug */
   background-color: pink;
@@ -29,19 +35,45 @@ main > section {
 }
 /* fine debug */
 
-/* regole della navigazione */
-nav{
+/* inizio regoledell'aside */
+aside{
   flex-basis: 200px;
   flex-shrink: 0;
+  flex-direction: column;
 }
 
-/* corpo della pagina */
+.logo{
+  /* regole di debug   */
+  border: 1px solid black;
+  /* fine debug   */
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+aside .logo img{
+  width: 150px;
+}
+
+aside .playlist{
+  overflow: auto;
+}
+
+aside .profile{
+  /* align-content: flex-end; */
+  /* regole di debug */
+  border: 1px solid black;
+  /* fine debug   */
+}
+
+/* section del main */
 main > section{
   flex-grow: 1;
   flex-wrap: wrap;
   overflow: auto;
 }
 
+/* regole del banner */
 .banner{
   width: 100%;
   height: 100px;
@@ -49,6 +81,14 @@ main > section{
   position: fixed;
   z-index: 100;
   top: 0;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.banner .button a{
+  border: 1px solid;
+  border-radius: 30px;
+  padding: 10px 20px;
 }
 
 .album{
@@ -59,8 +99,18 @@ main > section{
   /* regole di debug */
   border: 1px solid white;
   /* fine debug */
-  width: 100%;
-  min-height: 200px;
+  min-height: 150px;
+}
+
+.menu ul{
+  text-align: center;
+  margin-top: 100px;
+}
+
+.menu li{
+  display: inline-block;
+  text-align: center;
+
 }
 
 .album{
@@ -68,8 +118,8 @@ main > section{
   border: 1px solid white;
   /* fine debug */
   width: 100%;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  /* flex-wrap: wrap; */
+  /* justify-content: space-between; */
 }
 
 .box{
@@ -90,4 +140,24 @@ footer {
   z-index: 100;
   bottom: 0;
   width: 100%;
+}
+
+/* per xs */
+@media all and (max-width: 480px){
+
+}
+
+/* sm */
+@media all and (min-width: 480px) and (max-width: 768px){
+
+}
+
+/* md */
+@media all and (min-width: 768px) and (max-width: 1024px){
+
+}
+
+/* lg */
+@media all and (min-width: 1024px){
+
 }
