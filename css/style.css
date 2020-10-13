@@ -32,6 +32,7 @@ main > section {
 /* regole della navigazione */
 nav{
   flex-basis: 200px;
+  flex-shrink: 0;
 }
 
 /* corpo della pagina */
@@ -78,8 +79,9 @@ main > section{
   width: 200px;
   margin-bottom: 10px;
   /* fine debug */
+}
 
-footer{
+footer {
   /* regole di debug */
   background-color: lightblue;
   /* fine debug */
