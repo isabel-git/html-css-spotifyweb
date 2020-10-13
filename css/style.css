@@ -9,13 +9,17 @@ ul{
   list-style-type: none;
 }
 
+.flex-container{
+  display: flex;
+}
+
 
 main{
   /* regole di debug */
   background-color: pink;
   /* fine debug */
   height: calc(100vh - 100px);
-  display: flex;
+
 }
 
 /* regole di debug */
@@ -33,35 +37,53 @@ nav{
 /* corpo della pagina */
 main > section{
   flex-grow: 1;
-}
-
-section .bottom{
-  display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
+  overflow: auto;
 }
 
-section .box{
+.banner{
+  width: 100%;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  z-index: 100;
+  top: 0;
+}
+
+.album{
+  width: 100%;
+}
+
+.menu{
   /* regole di debug */
-  min-height: 150px;
-  width: 120px;
-  background-color: red;
+  border: 1px solid white;
   /* fine debug */
+  width: 100%;
+  min-height: 200px;
 }
 
-section .top{
-  text-align: center;
+.album{
+  /* regole di debug */
+  border: 1px solid white;
+  /* fine debug */
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-section .top li{
-  display: inline-block;
-}
+.box{
+  /* regole di debug */
+  background-color: red;
+  min-height: 200px;
+  width: 200px;
+  margin-bottom: 10px;
+  /* fine debug */
 
 footer{
   /* regole di debug */
   background-color: lightblue;
-  height: 100px;
   /* fine debug */
+  height: 100px;
   position: fixed;
   z-index: 100;
   bottom: 0;
