@@ -28,8 +28,8 @@ main{
 
 }
 
-/* inizio regoledell'aside */
-main > aside{
+/* inizio regole dell'aside-large */
+#aside-large {
   flex-basis: 200px;
   flex-shrink: 0;
   flex-direction: column;
@@ -39,44 +39,49 @@ main > aside{
   padding: 10px;
 }
 
-aside nav{
+#aside-large nav{
   /* regole di debug */
   border: 1px solid white;
   /* fine debug   */
 }
 
-aside .logo{
+#aside-large .logo{
   /* regole di debug */
   border: 1px solid white;
   /* fine debug   */
   height: 100px;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
 }
 
-aside .logo img{
+#aside-large .logo img{
   width: 150px;
 }
 
-aside .center{
+#aside-large .center{
   overflow: auto;
-  min-height: 50px;
 }
 
-aside .playlist{
+#aside-large .playlist{
   /* regole di debug */
   border: 1px solid white;
   /* fine debug   */
   /* height: 100px; */
 }
 
-aside .profile{
+#aside-large .profile{
   /* regole di debug */
   border: 1px solid white;
   /* fine debug   */
 }
+/* fine regole aside-large */
 
-/* section del main */
+/* aside per mobile */
+#aside-slim{
+  display: none;
+}
+
+/* inizio section del main */
 main > section{
   flex-grow: 1;
   flex-wrap: wrap;
@@ -121,9 +126,9 @@ main > section{
   margin-bottom: 20px;
 }
 
-.menu ul{
+/* .menu ul{
 
-}
+} */
 
 .menu li{
   display: inline-block;
@@ -136,7 +141,7 @@ main > section{
   border: 1px solid white;
   /* fine debug */
   width: 100%;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
   /* justify-content: space-between; */
 }
 
@@ -148,7 +153,9 @@ main > section{
   width: 200px;
   margin-bottom: 10px;
 }
+/* fine section */
 
+/* regole del footer */
 footer {
   background-color: #282828;
   height: 100px;
@@ -187,6 +194,22 @@ footer .right{
 /* per xs */
 @media all and (max-width: 480px){
 
+  #aside-large{
+    display: none;
+  }
+
+  #aside-slim{
+    display: block;
+    width: 100px;
+    background: #000000;
+    /* padding */
+    padding: 10px;
+  }
+
+  .banner{
+    width: calc(100vw - 50px);
+
+  }
 }
 
 /* sm */
@@ -196,7 +219,6 @@ footer .right{
 
 /* md */
 @media all and (min-width: 768px) and (max-width: 1024px){
-
 }
 
 /* lg */
