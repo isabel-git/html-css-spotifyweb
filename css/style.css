@@ -129,12 +129,9 @@ main > section{
 .menu li{
   display: inline-block;
   text-align: center;
-
 }
 
-
-
-.album{
+.container{
   /* regole di debug */
   border: 1px solid white;
   /* fine debug */
@@ -146,11 +143,24 @@ main > section{
   padding: 10px;
 }
 
-.album .row{
-  /* regole di debug */
-  border: 1px solid white;
-  /* fine debug */
+.container p{
+  font-size: 11px;
+  color: #ccc;
 }
+
+.album{
+  text-align: center;
+}
+
+.album .box img{
+  width: 100%;
+}
+
+.album .box h4{
+  /* margin */
+  margin: 10px 0;
+}
+
 
 .box{
   /* regole di debug */
@@ -200,35 +210,36 @@ footer .center{
   min-height: 50px;
   /* fine debug */
   /* padding: 0 10%; */
-  /* flex-direction: column; */
-  /* align-items: center; */
-  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   flex-grow: 1;
-  flex-shrink: 1;
+
 }
 
 footer .center .top{
   /* regole di debug */
   border: 1px solid white;
   background-color: lightgreen;
-  height: 25px;
-  width: 50px;
+  /* height: 25px; */
+  /* width: 50px; */
   /* fine debug */
 }
 
 footer .center .bottom{
   /* padding: 0 10%; */
-  flex-grow: 1;
+  /* flex-grow: 1; */
   /* regole di debug */
   border: 1px solid white;
   background-color: lightblue;
-  height: 25px;
-  width: 100px;
+  /* height: 25px; */
+  /* width: 100px; */
   /* fine debug */
 }
 
 .control-bar-time{
   flex-grow: 1;
+  flex-shrink: 40;
   width: 200px;
 }
 
@@ -263,7 +274,9 @@ footer .right{
   border: 1px solid white;
   min-height: 50px;
   /* fine debug */
-  width: 150px;
+  width: 200px;
+  justify-content: center;
+  align-items: center;
 }
 
 
