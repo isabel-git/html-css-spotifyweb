@@ -143,17 +143,34 @@ main > section{
   padding: 10px;
 }
 
+.container .title{
+ /* margin and padding */
+ /* margin */
+ margin: 20px 0;
+}
+
 .container p{
   font-size: 11px;
   color: #ccc;
+}
+
+.row img{
+  width: 100%;
 }
 
 .album{
   text-align: center;
 }
 
-.album .box img{
-  width: 100%;
+.container .row .box{
+  /* regole di debug */
+  background-color: red;
+  /* fine debug */
+  min-height: 200px;
+  width: 200px;
+  margin-bottom: 10px;
+  /* padding */
+  padding-right: 3%
 }
 
 .album .box h4{
@@ -162,14 +179,10 @@ main > section{
 }
 
 
-.box{
-  /* regole di debug */
-  background-color: red;
-  /* fine debug */
-  min-height: 200px;
-  width: 200px;
-  margin-bottom: 10px;
+.row.three img{
+  border-radius: 50%;
 }
+
 /* fine section */
 
 /* regole del footer */
@@ -293,16 +306,22 @@ footer .right{
   }
 
   #aside-slim{
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 100px;
     background: #000000;
     /* padding */
     padding: 10px;
   }
 
+  #aside-slim nav{
+    margin-top: 10px;
+  }
+
+
   .banner{
     width: calc(100vw - 50px);
-
   }
 }
 
