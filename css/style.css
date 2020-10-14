@@ -99,7 +99,7 @@ main > section{
   justify-content: flex-end;
   align-items: center;
   /* padding */
-  padding: 10px;
+  padding: 20px;
 }
 
 .banner a{
@@ -108,11 +108,7 @@ main > section{
   padding: 10px 20px;
 }
 
-.album{
-  background-color: #141922;
-  /* padding */
-  padding: 10px;
-}
+
 
 .menu{
   /* regole di debug */
@@ -136,6 +132,8 @@ main > section{
 
 }
 
+
+
 .album{
   /* regole di debug */
   border: 1px solid white;
@@ -143,6 +141,15 @@ main > section{
   width: 100%;
   flex-wrap: wrap;
   /* justify-content: space-between; */
+  background-color: #141922;
+  /* padding */
+  padding: 10px;
+}
+
+.album .row{
+  /* regole di debug */
+  border: 1px solid white;
+  /* fine debug */
 }
 
 .box{
@@ -167,22 +174,90 @@ footer {
   padding: 10px;
 }
 
+/* parte sinistra */
 footer .left{
   /* regole di debug */
   border: 1px solid white;
   min-height: 50px;
   /* fine debug */
-  width: 150px;
+  width: 200px;
+  align-items: center;
 }
 
+footer .left img{
+  width: 50px;
+  margin-right: 10px;
+}
+
+footer .left .text{
+  margin-right: 20px;
+}
+
+/* parte centrale */
 footer .center{
   /* regole di debug */
   border: 1px solid white;
   min-height: 50px;
   /* fine debug */
+  /* padding: 0 10%; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+  justify-content: space-around;
   flex-grow: 1;
+  flex-shrink: 1;
 }
 
+footer .center .top{
+  /* regole di debug */
+  border: 1px solid white;
+  background-color: lightgreen;
+  height: 25px;
+  width: 50px;
+  /* fine debug */
+}
+
+footer .center .bottom{
+  /* padding: 0 10%; */
+  flex-grow: 1;
+  /* regole di debug */
+  border: 1px solid white;
+  background-color: lightblue;
+  height: 25px;
+  width: 100px;
+  /* fine debug */
+}
+
+.control-bar-time{
+  flex-grow: 1;
+  width: 200px;
+}
+
+.progress-bar{
+  /* width: 100px; */
+  height: 8px;
+  background-color: #666666;
+  display: inline-block;
+  border-radius: 10px;
+}
+
+.progress-bar.volume{
+  width: 100px;
+}
+
+.progress-bar.time {
+  width: 100%;
+
+}
+
+.actually-bar {
+  width: 20%;
+  height: 100%;
+  background-color: #B4BB6B;
+  display:block;
+  border-radius: 10px;
+}
+
+/* parte destra */
 footer .right{
   /* regole di debug */
   border: 1px solid white;
@@ -191,6 +266,12 @@ footer .right{
   width: 150px;
 }
 
+
+
+
+
+
+/* MEDIA QUERY */
 /* per xs */
 @media all and (max-width: 480px){
 
