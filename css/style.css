@@ -21,30 +21,33 @@ ul{
 
 /* regole corpo della pagina */
 main{
-  /* regole di debug */
+  /* regole di debug
   background-color: pink;
   /* fine debug */
   height: calc(100vh - 100px);
 
 }
 
-/* regole di debug */
-nav,
-main > section {
-  border: 1px solid black;
-}
-/* fine debug */
-
 /* inizio regoledell'aside */
-aside{
+main > aside{
   flex-basis: 200px;
   flex-shrink: 0;
   flex-direction: column;
+  justify-content: space-between;
+  background: #000000;
+  /* padding */
+  padding: 10px;
 }
 
-.logo{
-  /* regole di debug   */
-  border: 1px solid black;
+aside nav{
+  /* regole di debug */
+  border: 1px solid white;
+  /* fine debug   */
+}
+
+aside .logo{
+  /* regole di debug */
+  border: 1px solid white;
   /* fine debug   */
   height: 100px;
   justify-content: center;
@@ -55,14 +58,21 @@ aside .logo img{
   width: 150px;
 }
 
-aside .playlist{
+aside .center{
   overflow: auto;
+  min-height: 50px;
+}
+
+aside .playlist{
+  /* regole di debug */
+  border: 1px solid white;
+  /* fine debug   */
+  /* height: 100px; */
 }
 
 aside .profile{
-  /* align-content: flex-end; */
   /* regole di debug */
-  border: 1px solid black;
+  border: 1px solid white;
   /* fine debug   */
 }
 
@@ -75,36 +85,44 @@ main > section{
 
 /* regole del banner */
 .banner{
-  width: 100%;
+  width: calc(100vw - 200px);
   height: 100px;
   background-color: rgba(0, 0, 0, 0.6);
   position: fixed;
   z-index: 100;
   top: 0;
-  /* justify-content: center; */
+  justify-content: flex-end;
   align-items: center;
+  /* padding */
+  padding: 10px;
 }
 
-.banner .button a{
+.banner a{
   border: 1px solid;
   border-radius: 30px;
   padding: 10px 20px;
 }
 
 .album{
-  width: 100%;
+  background-color: #141922;
+  /* padding */
+  padding: 10px;
 }
 
 .menu{
   /* regole di debug */
   border: 1px solid white;
   /* fine debug */
-  min-height: 150px;
+  min-height: 50px;
+  margin-top: 100px;
+  align-items: center;
+  justify-content: center;
+  /* margin */
+  margin-bottom: 20px;
 }
 
 .menu ul{
-  text-align: center;
-  margin-top: 100px;
+
 }
 
 .menu li{
@@ -125,21 +143,45 @@ main > section{
 .box{
   /* regole di debug */
   background-color: red;
+  /* fine debug */
   min-height: 200px;
   width: 200px;
   margin-bottom: 10px;
-  /* fine debug */
 }
 
 footer {
-  /* regole di debug */
-  background-color: lightblue;
-  /* fine debug */
+  background-color: #282828;
   height: 100px;
   position: fixed;
   z-index: 100;
   bottom: 0;
   width: 100%;
+  /* padding */
+  padding: 10px;
+}
+
+footer .left{
+  /* regole di debug */
+  border: 1px solid white;
+  min-height: 50px;
+  /* fine debug */
+  width: 150px;
+}
+
+footer .center{
+  /* regole di debug */
+  border: 1px solid white;
+  min-height: 50px;
+  /* fine debug */
+  flex-grow: 1;
+}
+
+footer .right{
+  /* regole di debug */
+  border: 1px solid white;
+  min-height: 50px;
+  /* fine debug */
+  width: 150px;
 }
 
 /* per xs */
