@@ -39,6 +39,7 @@ main{
   padding: 10px;
 }
 
+
 #aside-large nav{
   /* regole di debug */
   border: 1px solid white;
@@ -49,13 +50,27 @@ main{
   /* regole di debug */
   border: 1px solid white;
   /* fine debug   */
-  height: 100px;
   /* justify-content: center; */
   align-items: center;
 }
 
 #aside-large .logo img{
   width: 150px;
+}
+
+#aside-large nav img{
+  width: 20px;
+}
+
+#aside-large li{
+  padding: 10px;
+}
+
+.fa.fa-plus{
+  color: black;
+  background-color: #ccc;
+  padding: 10px;
+  font-size: 30px;
 }
 
 #aside-large .center{
@@ -73,6 +88,16 @@ main{
   /* regole di debug */
   border: 1px solid white;
   /* fine debug   */
+}
+
+#dow{
+  width: 15px;
+}
+
+#prof{
+  width: 25px;
+  background-color: #ccc;
+  border-radius: 50%;
 }
 /* fine regole aside-large */
 
@@ -291,14 +316,6 @@ border-radius: 10px;
 }
 
 
-
-
-/* .progress-bar.volume{
-  width: 100px;
-} */
-
-
-
 /* parte destra */
 footer .right{
   /* regole di debug */
@@ -345,19 +362,22 @@ footer .right .icon {
     margin-top: 10px;
   }
 
-
   .banner{
     width: calc(100vw - 50px);
   }
 }
 
-/* sm */
+/* s */
 @media all and (min-width: 480px) and (max-width: 768px){
 
 }
 
 /* md */
 @media all and (min-width: 768px) and (max-width: 1024px){
+  section .row{
+
+  }
+
 }
 
 /* lg */
