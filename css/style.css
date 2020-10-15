@@ -142,9 +142,8 @@ main > section{
   /* regole di debug */
   border: 1px solid white;
   /* fine debug */
-  min-height: 50px;
   /* margin */
-  margin-top: 100px;
+  margin-top: 80px;
   margin-bottom: 20px;
 }
 
