@@ -8,7 +8,7 @@
 
 a{
   text-decoration: none;
-  color: white;
+  color: #ccc;
 }
 
 ul{
@@ -116,7 +116,7 @@ main > section{
 /* regole del banner */
 .banner{
   width: calc(100vw - 200px);
-  height: 100px;
+  height: 80px;
   background-color: rgba(0, 0, 0, 0.6);
   position: fixed;
   z-index: 100;
@@ -131,30 +131,50 @@ main > section{
   border: 1px solid;
   border-radius: 30px;
   padding: 10px 20px;
+  transition: 1s;
 }
 
-
+.banner a:hover{
+  padding: 15px 25px;
+}
 
 .menu{
   /* regole di debug */
   border: 1px solid white;
   /* fine debug */
   min-height: 50px;
-  margin-top: 100px;
-  align-items: center;
-  justify-content: center;
   /* margin */
+  margin-top: 100px;
   margin-bottom: 20px;
 }
 
-/* .menu ul{
-
-} */
+.menu ul{
+  align-items: center;
+  justify-content: center;
+}
 
 .menu li{
   display: inline-block;
-  text-align: center;
+  /* margin */
+  margin-right: 10px;
 }
+
+.menu li a{
+  font-size: 11px;
+}
+
+.menu li a:hover{
+  color: white;
+}
+
+.menu li .selected{
+  width: 25px;
+  height: 2px;
+  margin: auto;
+  background-color: #B4BB6B;
+}
+
+
 
 .container{
   /* regole di debug */
@@ -162,7 +182,6 @@ main > section{
   /* fine debug */
   width: 100%;
   flex-wrap: wrap;
-  /* justify-content: space-between; */
   background-color: #141922;
   /* padding */
   padding: 10px;
@@ -179,9 +198,6 @@ main > section{
   color: #ccc;
 }
 
-.row img{
-  width: 100%;
-}
 
 .album{
   text-align: center;
@@ -189,7 +205,7 @@ main > section{
 
 .container .row .box{
   /* regole di debug */
-  background-color: red;
+  /* background-color: red; */
   /* fine debug */
   min-height: 200px;
   width: 200px;
@@ -198,14 +214,69 @@ main > section{
   padding-right: 3%
 }
 
+/* regole play hover */
+#hover-image {
+  position: relative;
+  /* borde: 1px solid black; */
+}
+
+.box img{
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.box:hover .overlay {
+  opacity: 1;
+}
+
+#hover-image i{
+  color: white;
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+/* fine regole play hover */
+
 .album .box h4{
   /* margin */
   margin: 10px 0;
 }
 
-
 .row.three img{
   border-radius: 50%;
+}
+
+.overlay-three {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  opacity: 0;
+  transition: .5s;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.box:hover .overlay-three {
+  opacity: 1;
 }
 
 /* fine section */
@@ -257,14 +328,13 @@ footer .center{
 footer .center .top{
   /* flex-grow: 1; */
   /* background-color: blue; */
-  height: 50%;
-  font-size: 15px;
+  border: 1px solid black;
+  justify-content: space-between;
   align-items: baseline;
-  /* vedi altre proprieta' */
-}
+  width: 100px;
+  font-size: 15px;
 
-footer .center .top a{
-  /* padding: 5%; */
+  /* vedi altre proprieta' */
 }
 
 #play{
@@ -309,10 +379,29 @@ border-radius: 10px;
 .actually-bar {
   width: 20%;
   height: 100%;
-  background-color: #B4BB6B;
+  background-color: #ccc;
   display:block;
   border-radius: 10px;
+  position: relative;
+}
+.actually-bar:hover{
+  background-color: #B4BB6B;
+}
 
+.ball{
+  display: none;
+  position: absolute;
+  top: -3px;
+  right: 0;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  background: white;
+}
+
+
+.actually-bar:hover .ball{
+  display: block;
 }
 
 
@@ -365,6 +454,8 @@ footer .right .icon {
   .banner{
     width: calc(100vw - 50px);
   }
+
+
 }
 
 /* s */
