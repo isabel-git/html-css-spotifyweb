@@ -55,7 +55,8 @@ main{
 }
 
 #aside-large  .top{
-  height: 90%;
+  height: 80%;
+  flex-grow: 1;
 }
 
 
@@ -119,6 +120,10 @@ main{
 
 
 /* aside bottom */
+#aside-large .profile{
+  background-color: black;
+}
+
 #aside-large .profile{
   /* regole di debug */
   border: 1px solid white;
@@ -235,6 +240,7 @@ main > section{
 
 .album{
   text-align: center;
+  flex-wrap: wrap;
 }
 
 .container .row .box{
@@ -242,7 +248,7 @@ main > section{
   /* background-color: red; */
   /* fine debug */
   min-height: 200px;
-  flex-basis: calc(100% / 4);
+  flex-basis: calc(100% / 6);
   margin-bottom: 10px;
   /* padding */
   padding-right: 3%
@@ -460,8 +466,6 @@ footer .right .icon {
 } */
 
 
-
-
 /* MEDIA QUERY */
 /* per xs */
 @media all and (max-width: 480px){
@@ -488,23 +492,28 @@ footer .right .icon {
     width: calc(100vw - 50px);
   }
 
+  .container .row .box{
+    flex-basis: 50%;
+  }
+
 
 }
 
 /* s */
 @media all and (min-width: 480px) and (max-width: 768px){
-
+  .container .row .box{
+    flex-basis: 50%;
+  }
 }
 
 /* md */
 @media all and (min-width: 768px) and (max-width: 1024px){
-  section .row{
-
+  .container .row .box{
+    flex-basis: 25%
   }
-
 }
 
 /* lg */
-@media all and (min-width: 1024px){
+/* @media all and (min-width: 1024px){
 
-}
+} */
