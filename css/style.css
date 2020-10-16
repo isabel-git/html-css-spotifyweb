@@ -6,12 +6,27 @@
   color: white;
 }
 
+/* link */
 a{
   text-decoration: none;
   color: #ccc;
 }
 
-ul{
+a:hover{
+  color: white;
+}
+
+/* icon */
+i{
+  color: #ccc;
+}
+
+i:hover{
+  color: white;
+}
+
+
+li{
   list-style-type: none;
 }
 
@@ -39,6 +54,10 @@ main{
   padding: 10px;
 }
 
+#aside-large  .top{
+  height: 90%;
+}
+
 
 #aside-large nav{
   /* regole di debug */
@@ -62,7 +81,22 @@ main{
   width: 20px;
 }
 
-#aside-large li{
+
+/* playlist */
+#aside-large .playlist{
+  /* regole di debug */
+  border: 1px solid white;
+  /* fine debug   */
+  height: 50%;
+  flex-direction: column;
+
+}
+
+.playlist h4{
+  padding: 10px;
+}
+
+#a-plus{
   padding: 10px;
 }
 
@@ -73,17 +107,18 @@ main{
   font-size: 30px;
 }
 
-#aside-large .center{
-  overflow: auto;
+.playlist ul{
+  overflow-y: auto;
+  height: 100%;
 }
 
-#aside-large .playlist{
-  /* regole di debug */
-  border: 1px solid white;
-  /* fine debug   */
-  /* height: 100px; */
+#aside-large li{
+  padding: 10px;
 }
 
+
+
+/* aside bottom */
 #aside-large .profile{
   /* regole di debug */
   border: 1px solid white;
@@ -119,7 +154,7 @@ main > section{
   height: 80px;
   background-color: rgba(0, 0, 0, 0.6);
   position: fixed;
-  z-index: 100;
+  z-index: 200;
   top: 0;
   justify-content: flex-end;
   align-items: center;
@@ -222,6 +257,7 @@ main > section{
 .box img{
   width: 100%;
   height: auto;
+  align-items: baseline;
 }
 
 .overlay {
@@ -247,8 +283,6 @@ main > section{
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
 }
@@ -344,7 +378,7 @@ footer .center .bottom{
   display: flex;
   justify-content: center;
   align-items: baseline;
-  width: 80%;
+  width: 100%;
   border: 1px solid black;
 }
 
