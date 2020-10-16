@@ -242,7 +242,7 @@ main > section{
   /* background-color: red; */
   /* fine debug */
   min-height: 200px;
-  width: 200px;
+  flex-basis: calc(100% / 4);
   margin-bottom: 10px;
   /* padding */
   padding-right: 3%
