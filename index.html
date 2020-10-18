@@ -26,9 +26,9 @@
           <!-- navigazione -->
           <nav>
             <ul>
-              <li><a href="#"><img src="img/home.svg" alt="">Home</a></li>
-              <li><a href="#"><img src="img/search.svg" alt="">Cerca</a></li>
-              <li><a href="#"><img src="img/libreria.svg" alt="">La tua libreria</a></li>
+              <li><a class="icon-align" href="#"><img src="img/home.svg" alt="">Home</a></li>
+              <li><a class="icon-align" href="#"><img src="img/search.svg" alt="">Cerca</a></li>
+              <li><a class="icon-align" href="#"><img src="img/libreria.svg" alt="">La tua libreria</a></li>
             </ul>
           </nav>
         </div>
@@ -37,7 +37,7 @@
           <!-- playlist -->
           <div class="center-title-playlist">
             <h4>PLAYLIST</h4>
-            <a id="a-plus" href="#"><i class="fa fa-plus" aria-hidden="true"></i>Crea Playlist</a>
+            <a id="a-plus" class="icon-align" href="#"><i class="fa fa-plus" aria-hidden="true"></i>Crea Playlist</a>
           </div>
 
           <div class="center-playlist">
@@ -60,13 +60,16 @@
 
           <div class="profile">
 
-            <a href="#"><img id="dow"src="img/download.svg" alt=""> Installa app</a>
+            <a class="icon-align" href="#"><img id="dow"src="img/download.svg" alt=""> Installa app</a>
             <hr>
-            <strong><img id="prof" src="img/profile.svg" alt="">John Doe</strong>
+
+            <a class="icon-align" href="#">
+              <img id="prof" src="img/profile.svg" alt="">
+              <h4 id="js-prof"> </h4>
+            </a>
+
           </div>
-
         </div>
-
 
       </aside>
 
@@ -385,6 +388,11 @@
         </div>
       </div>
     </footer>
+
+    <!-- JavaScript -->
+    <script type="text/javascript">
+      document.getElementById('js-prof').innerHTML='John Doe';
+    </script>
 
   </body>
 </html>

@@ -25,6 +25,10 @@ i:hover{
   color: white;
 }
 
+.icon-align{
+  display: flex;
+  align-items: center;
+}
 
 li{
   list-style-type: none;
@@ -36,11 +40,7 @@ li{
 
 /* regole corpo della pagina */
 main{
-  /* regole di debug
-  background-color: pink;
-  /* fine debug */
   height: calc(100vh - 100px);
-
 }
 
 /* inizio regole dell'aside-large */
@@ -58,21 +58,6 @@ main{
   width: 100%;
 }
 
-
-#aside-large nav{
-  /* regole di debug */
-  border: 1px solid white;
-  /* fine debug   */
-}
-
-#aside-large .logo{
-  /* regole di debug */
-  border: 1px solid white;
-  /* fine debug   */
-  /* justify-content: center; */
-  /* align-items: center; */
-}
-
 #aside-large .logo img{
   width: 150px;
 }
@@ -87,16 +72,8 @@ main{
   height: 100px;
 }
 
-#aside-large .center-playlist{
-  /* regole di debug */
-  border: 1px solid white;
-  /* fine debug   */
-  flex-grow: 2;
-  width: 100%;
-  overflow: auto;
-}
 
-#aside-large .center h4{
+#aside-large .center-title-playlist h4{
   /* padding */
   padding: 10px;
 }
@@ -109,11 +86,16 @@ main{
 .fa.fa-plus{
   color: black;
   background-color: #ccc;
-  font-size: 30px;
+  font-size: 25px;
   /* padding */
-  padding: 10px;
+  padding: 5px;
 }
 
+#aside-large .center-playlist{
+  flex-grow: 2;
+  width: 100%;
+  overflow: auto;
+}
 
 #aside-large li{
   /* padding */
@@ -123,15 +105,13 @@ main{
 
 /* aside bottom */
 #aside-large .bottom{
-  height: 150px;
+  height: 100px;
   width: 100%;
   align-items: flex-end;
 }
 
-#aside-large .profile{
-  /* regole di debug */
-  border: 1px solid white;
-  /* fine debug   */
+#aside-large .bottom .profile{
+  width: 100%;
 }
 
 #dow{
@@ -183,9 +163,6 @@ main > section{
 }
 
 .menu{
-  /* regole di debug */
-  border: 1px solid white;
-  /* fine debug */
   text-align: center;
   /* margin */
   margin-top: 80px;
@@ -220,9 +197,6 @@ main > section{
 }
 
 .container{
-  /* regole di debug */
-  border: 1px solid white;
-  /* fine debug */
   width: 100%;
   flex-wrap: wrap;
   background-color: #141922;
@@ -232,7 +206,6 @@ main > section{
 
 .container .title{
  /* margin and padding */
- /* margin */
  margin: 20px 0;
 }
 
@@ -248,9 +221,6 @@ main > section{
 }
 
 .container .row .box{
-  /* regole di debug */
-  /* background-color: red; */
-  /* fine debug */
   min-height: 200px;
   flex-basis: calc(100% / 6);
   margin-bottom: 10px;
@@ -261,7 +231,6 @@ main > section{
 /* regole play hover */
 #hover-image {
   position: relative;
-  /* borde: 1px solid black; */
 }
 
 .box img{
@@ -322,7 +291,6 @@ main > section{
 .box:hover .overlay-three {
   opacity: 1;
 }
-
 /* fine section */
 
 /* regole del footer */
@@ -339,10 +307,6 @@ footer {
 
 /* parte sinistra */
 footer .left{
-  /* regole di debug */
-  border: 1px solid white;
-  min-height: 50px;
-  /* fine debug */
   width: 200px;
   align-items: center;
 }
@@ -359,20 +323,15 @@ footer .left .text{
 /* parte centrale */
 footer .center{
   display: flex;
-  /* width: auto; */
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* flex-shrink: 200; */
-  /* height: 100px; */
-  border: 1px solid black;
   flex-grow: 1;
+  /* padding */
+  padding: 0 5%;
 }
 
 footer .center .top{
-  /* flex-grow: 1; */
-  /* background-color: blue; */
-  border: 1px solid black;
   justify-content: space-between;
   align-items: baseline;
   width: 150px;
@@ -388,16 +347,13 @@ footer .center .bottom{
   justify-content: center;
   align-items: baseline;
   width: 100%;
-  border: 1px solid black;
-}
-
-h5{
-  margin: 0 10px;
 }
 
 /* barra del tempo */
 .control-bar-time{
   width: 50%;
+  /* margin */
+  margin: 0 10px;
 }
 
 .progress-bar-time {
@@ -410,10 +366,6 @@ h5{
 
 /* parte destra */
 footer .right{
-  /* regole di debug */
-  border: 1px solid white;
-  min-height: 50px;
-  /* fine debug */
   width: 200px;
   justify-content: center;
   align-items: center;
@@ -421,6 +373,7 @@ footer .right{
 
 footer .right .icon {
   justify-content: space-around;
+  flex-wrap: wrap;
   width: 50%;
 }
 
